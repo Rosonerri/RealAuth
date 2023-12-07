@@ -1,9 +1,21 @@
-import express, {Application} from "express"
-import cors from "cors"
-import dotEnv from "dotenv"
+console.clear()
+import express, { Application } from "express";
+import cors from "cors";
+import dotEnv from "dotenv";
+import { dbConfig } from "./utils/dbConfig";
+dotEnv.config();
+import {mainApp}  from "./mainApp";
+
 const app: Application = express();
+const port: number = parseInt(process.env.PORT!);
 
+app.use(express.json());
+app.use(cors());
 
-const URL: string | undefined = process.env.DATABASE_STRING;
+mainApp(app)
+app.listen(port, () => {
+  console.log(port)
+  dbConfig(); 
+});
 
 
