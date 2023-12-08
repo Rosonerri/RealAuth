@@ -7,7 +7,7 @@ const URL: string  = "mongodb+srv://gabrieldotajayi4real:tobez007@cluster0.ao76l
 export const dbConfig = async () => {
   try {
     await connect(URL).then(() => {
-      console.log("DB connected...!");
+      console.log("DB connected...🚀🚀🚀!");
     });
   } catch (error) {
     return error;

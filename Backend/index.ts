@@ -15,7 +15,7 @@ app.use(cors());
 mainApp(app)
 app.listen(port, () => {
   console.log(port)
-  dbConfig(); 
+  dbConfig() 
 });
 
 

@@ -17,7 +17,7 @@ const viewError = (err: mainError, res: Response) =>{
 
 };
 
-export const errorHandler = (err: mainError,next: NextFunction, req:Request, res: Response) =>{
+export const errorHandler = (err: mainError, next: NextFunction, req:Request, res: Response) =>{
 try {
     return viewError(err, res);
 } catch (error) {
